@@ -1,5 +1,5 @@
 # lorempixel
-A Polymer web component to serve up lorempixel.com placeholder images.
+A Polymer web component to serve up [lorempixel.com](http://www.lorempixel.com) placeholder images.
 
 ###[Demo](http://derekshull.github.io/lorempixel/)###
  
