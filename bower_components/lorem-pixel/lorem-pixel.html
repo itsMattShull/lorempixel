@@ -1,0 +1,34 @@
+<dom-module id="lorem-pixel">
+  <style>
+
+  </style>
+  
+  <template>
+      <img src$="{{computeSrc(grayscale, width, height, category, offset, text)}}">
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "lorem-pixel",
+    properties: {
+      width: String,
+      height: String,
+      category: String,
+      offset: String,
+      text: String,
+      grayscale: Boolean
+    },
+    computeSrc: function(grayscale, width, height, category, offset, text) {
+    	var options="";
+    	if (height==undefined) {height=width;}
+    	if (grayscale==true) {options+= '/g';}
+    	if (width!=undefined) {options+= '/'+width;}
+    	if (height!=undefined) {options+= '/'+height;}
+    	if (category!=undefined) {options+= '/'+category;}
+    	if (offset!=undefined) {options+= '/'+offset;}
+    	if (text!=undefined) {options+= '/'+text;}
+      	return 'http://www.lorempixel.com' + options;
+    }
+  });
+</script>
